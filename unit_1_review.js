@@ -207,6 +207,11 @@ class Person{
                         if(p.animal === animal) return p;
                 })
         }
+        petsOfKindAlexMethod(animal){
+                return this.pets.filter((e)=>{
+                        return animal === e.animal;
+                })
+        }
 }
 //test
 console.log(' ');
@@ -226,11 +231,14 @@ console.log(moProfile);
 console.log(" ");
 console.log("------------ Mo's dogs -------------");
 console.log(mo.petsOfKind('Dog'));
+console.log(mo.petsOfKindAlexMethod('Dog'));
 console.log(" ");
 console.log("------------- Mo's cats --------------");
 console.log(mo.petsOfKind('Cat'));
+console.log(mo.petsOfKindAlexMethod('Cat'));
 console.log(" ");
 console.log("------------- Mo's cows --------------");
 console.log(mo.petsOfKind('Cow'));
+console.log(mo.petsOfKindAlexMethod('Cow'));
 console.log(" ");
 console.log('-------------------------------------');
